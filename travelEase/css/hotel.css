@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #9c2c5e;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #9c2c5e;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+}
+
+.icons i {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #9c2c5e;
+}
+
+.hotel-details {
+  padding: 20px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carousel-image {
+  width: 90%;
+  height: 250px;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.hotel-info {
+  flex: 2;
+}
+
+.hotel-info h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: #f5c518;
+  font-size: 18px;
+}
+
+.map-link {
+  text-decoration: none;
+  color: #9c2c5e;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.room-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room-img {
+  width: 100px;
+  background: #ddd;
+}
+
+.room-details {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.room-details button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid #9c2c5e;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selected .room-details button {
+  background-color: #9c2c5e;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.selection-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selection-panel h4 {
+  margin-bottom: 10px;
+}
+
+.calendar, .duration-box, .flights-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.durations button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  background: none;
+  border: 2px solid #9c2c5e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.durations button.active {
+  background-color: #9c2c5e;
+  color: white;
+  font-weight: bold;
+}
+
+.flight {
+  margin-bottom: 10px;
+}
+
+.payment-btn {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.payment-btn button {
+  background-color: #9c2c5e;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+}

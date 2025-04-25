@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TravelEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+  <!-- HEADER / TOP BAR -->
+  <header> 
+    <div class="top-bar">
+      <a href="index.html" class="logo">TravelEase</a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <a href="wishlist.html" class="wishlist" title="Favourites">❤️</a>
+        <a href="flight-search.html" class="flight-button">Search Flights</a>
+        <a href="account.html" title="My Account"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH SECTION -->
+  <section class="search-container">
+    <h2>Let Us Find Your Perfect Holiday</h2>
+    <form>
+      <div class="form-group">
+        <label for="departing">Departing From</label>
+        <input type="text" id="departing" name="departing" placeholder="Enter city or airport">
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" name="destination" placeholder="Enter destination">
+      </div>
+      <div class="form-group">
+        <label for="travel-date">Travel Date</label>
+        <input type="date" id="travel-date" name="travel-date">
+      </div>
+      <div class="form-group">
+        <label for="passengers">Passengers</label>
+        <select id="passengers" name="passengers">
+          <option>1 Adult 0 Children</option>
+          <option>2 Adults 1 Child</option>
+        </select>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <h3>Why Choose TravelEase?</h3>
+    <div class="icon-row">
+      <div class="icon-box">
+        <span>🏷️</span>
+        <p>Best Prices</p>
+      </div>
+      <div class="icon-box">
+        <span>⏰</span>
+        <p>24 Hour Support</p>
+      </div>
+      <div class="icon-box">
+        <span>🛡️</span>
+        <p>ATOL Protected</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS SECTION -->
+  <section class="destinations">
+    <h3>Popular Destinations</h3>
+    <div class="carousel-container">
+      <button class="carousel-btn left">&#9664;</button>
+      <div class="card-row">
+        <div class="card">Destination 1</div>
+        <div class="card">Destination 2</div>
+        <div class="card">Destination 3</div>
+        <div class="card">Destination 4</div>
+        <div class="card">Destination 5</div>
+      </div>
+      <button class="carousel-btn right">&#9654;</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact Us | Company Policies | Our Social Media</p>
+  </footer>
+      <script>
+      document.getElementById('flight-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // prevent default form behavior
+        window.location.href = 'search-results.html'; // redirect
+      });
+    </script>
+  </body>
+</html>

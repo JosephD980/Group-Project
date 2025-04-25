@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/search.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">TravelEase</a>
+    <nav>
+      <a href="#">Destinations</a>
+      <a href="#">Offers</a>
+      <a href="#">FAQ</a>
+    </nav>
+    <div class="header-icons">
+      <a href="wishlist.html" title="Favourites"><i class="fas fa-heart"></i></a>
+      <a href="flight-search.html" class="flight-button">Search Flights</a>
+    </div>
+  </header>
+
+  <section class="search-bar">
+    <h2>Let Us Find Your Perfect Holiday</h2>
+    <div class="inputs">
+      <div><label>Where From?</label><input type="text" placeholder="Departing From"></div>
+      <div><label>Where To?</label><input type="text" placeholder="Destination"></div>
+      <div><label>When?</label><input type="date"></div>
+      <div><label>How Many People?</label><input type="text" placeholder="1 Adult 0 Children"></div>
+    </div>
+  </section>
+
+  <main class="content">
+    <aside class="filters">
+      <h3>Refine your Search</h3>
+
+      <div>
+        <label>How many stars?</label>
+        <div class="stars">★★★☆☆</div>
+      </div>
+
+      <div>
+        <label>Price Range</label>
+        <input type="range" min="0" max="1000">
+      </div>
+
+      <div>
+        <label>Holiday Type</label>
+        <ul>
+          <li><input type="checkbox" checked> Family</li>
+          <li><input type="checkbox" checked> Beach</li>
+          <li><input type="checkbox" checked> Adventure</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="hotels">
+      <h3>We've Found 1000 destinations</h3>
+
+      <div class="hotel-card" onclick="location.href='hotel-details.html'">
+        <div class="image-placeholder"></div>
+        <div class="details">
+          <h4>Hotel Name ★★★☆☆</h4>
+          <p>Country, City</p>
+          <p>Room Type</p>
+          <p>Board Options</p>
+          <p>£ Cost per person</p>
+          <button>Continue</button>
+        </div>
+      </div>
+
+      <!-- Duplicate hotel-card as needed -->
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4>Contact Us</h4>
+      <p>📧 email@example.com</p>
+      <p>📞 +44 1234 567890</p>
+    </div>
+    <div>
+      <h4>Company Policies</h4>
+      <p>Privacy Policy</p>
+      <p>Terms & Conditions</p>
+    </div>
+    <div>
+      <h4>Our Social Media</h4>
+      <p>Facebook | Twitter | Instagram</p>
+    </div>
+  </footer>
+</body>
+</html>

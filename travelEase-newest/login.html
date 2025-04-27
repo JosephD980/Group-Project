@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login · TravelEase</title>
+
+  <!-- fonts + site style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">      <!-- global look -->
+  <style>
+    /* page-local tweaks */
+    .auth-wrapper{
+      max-width: 380px; margin:4rem auto; padding:2rem;
+      border:1px solid #e6e6e6; border-radius:10px; background:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+    }
+    .auth-wrapper h2{ text-align:center; margin-bottom:1.5rem; color:#880e4f; }
+    .auth-wrapper label{ display:block; margin:.8rem 0 .3rem; font-weight:600; }
+    .auth-wrapper input{
+      width:100%; padding:.6rem .8rem; border:1px solid #ccc;
+      border-radius:10px; font-size:.95rem;
+    }
+    .auth-wrapper button{
+      width:100%; margin-top:1.5rem; padding:.7rem 1rem;
+      background:#880e4f; color:#fff; border:none; border-radius:10px;
+      font-weight:bold; cursor:pointer;
+    }
+    .switch-link{ margin-top:.8rem; text-align:center; font-size:.9rem; }
+    .switch-link a{ color:#880e4f; text-decoration:none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelEase</a>
+</header>
+
+<main class="auth-wrapper">
+  <h2>Log in to your account</h2>
+
+  <form id="login-form">
+    <label for="email">Email address</label>
+    <input id="email" type="email" required>
+
+    <label for="pwd">Password</label>
+    <input id="pwd" type="password" required>
+
+    <button type="submit">Log&nbsp;In</button>
+  </form>
+
+  <div class="switch-link">
+    No account yet? <a href="#" onclick="showSignup()">Sign&nbsp;up</a>
+  </div>
+
+  <!-- sign-up markup (hidden until link clicked) -->
+  <form id="signup-form" style="display:none">
+    <h2 style="margin-top:0">Create an account</h2>
+
+    <label for="name">Full name</label>
+    <input id="name" type="text" required>
+
+    <label for="new-mail">Email address</label>
+    <input id="new-mail" type="email" required>
+
+    <label for="new-pwd">Password</label>
+    <input id="new-pwd" type="password" required>
+
+    <button type="submit">Create&nbsp;Account</button>
+  </form>
+
+  <div class="switch-link" id="back-to-login" style="display:none">
+    Already have an account? <a href="#" onclick="showLogin()">Log&nbsp;in</a>
+  </div>
+</main>
+
+<script>
+/* toggle between the two mini forms */
+function showSignup(){
+  document.getElementById('login-form').style.display='none';
+  document.getElementById('signup-form').style.display='block';
+  document.getElementById('back-to-login').style.display='block';
+}
+function showLogin(){
+  document.getElementById('signup-form').style.display='none';
+  document.getElementById('login-form').style.display='block';
+  document.getElementById('back-to-login').style.display='none';
+}
+
+/* For now, successful submit → account.html whether data matches or not */
+document.querySelectorAll('#login-form,#signup-form').forEach(f=>{
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    window.location.href='account.html';
+  });
+});
+</script>
+</body>
+</html>

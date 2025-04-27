@@ -1,0 +1,122 @@
+[
+  {
+    "value": "PAR",
+    "label": "Paris (PAR)"
+  },
+  {
+    "value": "BCN",
+    "label": "Barcelona (BCN)"
+  },
+  {
+    "value": "AGP",
+    "label": "Malaga / Costa del Sol (AGP)"
+  },
+  {
+    "value": "ALC",
+    "label": "Alicante (ALC)"
+  },
+  {
+    "value": "PMI",
+    "label": "Palma de Mallorca (PMI)"
+  },
+  {
+    "value": "FAO",
+    "label": "Faro / Algarve (FAO)"
+  },
+  {
+    "value": "AMS",
+    "label": "Amsterdam (AMS)"
+  },
+  {
+    "value": "DUB",
+    "label": "Dublin (DUB)"
+  },
+  {
+    "value": "IST",
+    "label": "Istanbul (IST)"
+  },
+  {
+    "value": "DXB",
+    "label": "Dubai (DXB)"
+  },
+  {
+    "value": "JFK",
+    "label": "New York (JFK)"
+  },
+  {
+    "value": "LAS",
+    "label": "Las Vegas (LAS)"
+  },
+  {
+    "value": "LAX",
+    "label": "Los Angeles (LAX)"
+  },
+  {
+    "value": "SIN",
+    "label": "Singapore (SIN)"
+  },
+  {
+    "value": "HND",
+    "label": "Tokyo (HND)"
+  },
+  {
+    "value": "BKK",
+    "label": "Bangkok (BKK)"
+  },
+  {
+    "value": "HKG",
+    "label": "Hong Kong (HKG)"
+  },
+  {
+    "value": "CUN",
+    "label": "Cancun (CUN)"
+  },
+  {
+    "value": "HRG",
+    "label": "Hurghada (HRG)"
+  },
+  {
+    "value": "BRU",
+    "label": "Brussels (BRU)"
+  },
+  {
+    "value": "VIE",
+    "label": "Vienna (VIE)"
+  },
+  {
+    "value": "FCO",
+    "label": "Rome (FCO)"
+  },
+  {
+    "value": "ATH",
+    "label": "Athens (ATH)"
+  },
+  {
+    "value": "PRG",
+    "label": "Prague (PRG)"
+  },
+  {
+    "value": "CPH",
+    "label": "Copenhagen (CPH)"
+  },
+  {
+    "value": "ARN",
+    "label": "Stockholm (ARN)"
+  },
+  {
+    "value": "LIS",
+    "label": "Lisbon (LIS)"
+  },
+  {
+    "value": "MUC",
+    "label": "Munich (MUC)"
+  },
+  {
+    "value": "GVA",
+    "label": "Geneva (GVA)"
+  },
+  {
+    "value": "MLE",
+    "label": "Mal\u00e9 / Maldives (MLE)"
+  }
+]

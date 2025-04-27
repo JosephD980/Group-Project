@@ -1,0 +1,82 @@
+[
+  {
+    "value": "LHR",
+    "label": "London Heathrow (LHR)"
+  },
+  {
+    "value": "LGW",
+    "label": "London Gatwick (LGW)"
+  },
+  {
+    "value": "MAN",
+    "label": "Manchester (MAN)"
+  },
+  {
+    "value": "STN",
+    "label": "London Stansted (STN)"
+  },
+  {
+    "value": "LTN",
+    "label": "London Luton (LTN)"
+  },
+  {
+    "value": "BHX",
+    "label": "Birmingham (BHX)"
+  },
+  {
+    "value": "EDI",
+    "label": "Edinburgh (EDI)"
+  },
+  {
+    "value": "GLA",
+    "label": "Glasgow (GLA)"
+  },
+  {
+    "value": "BRS",
+    "label": "Bristol (BRS)"
+  },
+  {
+    "value": "NCL",
+    "label": "Newcastle (NCL)"
+  },
+  {
+    "value": "LBA",
+    "label": "Leeds\u2011Bradford (LBA)"
+  },
+  {
+    "value": "EMA",
+    "label": "East Midlands (EMA)"
+  },
+  {
+    "value": "LPL",
+    "label": "Liverpool John Lennon (LPL)"
+  },
+  {
+    "value": "ABZ",
+    "label": "Aberdeen (ABZ)"
+  },
+  {
+    "value": "BFS",
+    "label": "Belfast International (BFS)"
+  },
+  {
+    "value": "BHD",
+    "label": "Belfast City (BHD)"
+  },
+  {
+    "value": "CWL",
+    "label": "Cardiff (CWL)"
+  },
+  {
+    "value": "SEN",
+    "label": "London Southend (SEN)"
+  },
+  {
+    "value": "BOH",
+    "label": "Bournemouth (BOH)"
+  },
+  {
+    "value": "SOU",
+    "label": "Southampton (SOU)"
+  }
+]

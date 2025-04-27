@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelEase – Search</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/main.css">     <!-- global rules (+ .flight-button) -->
+</head>
+<body>
+
+<!-- ========== HEADER =============================================== -->
+<header>
+  <div class="top-bar">
+    <a href="index.html" class="logo">TravelEase</a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+      <a href="wishlist.html" title="Favourites" class="wishlist">❤️</a>
+      <a href="flight-search.html" class="flight-button">Search Flights</a>
+      <a href="login.html" title="Log in / Sign up"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== SEARCH BAR (identical to index) ====================== -->
+<section class="search-container">
+  <h2>Let Us Find Your Perfect Holiday</h2>
+
+  <form id="flight-form">
+    <!-- Departing From -->
+    <div class="form-group">
+      <label for="departing">Departing From</label>
+      <input id="departing" type="text" placeholder="Departure airport(s)" list="departing-list">
+      <datalist id="departing-list"></datalist>
+    </div>
+
+    <!-- Destination -->
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <input id="destination" type="text" placeholder="Destination(s) or Hotel" list="destination-list">
+      <datalist id="destination-list"></datalist>
+    </div>
+
+    <!-- Date -->
+    <div class="form-group">
+      <label for="travel-date">Travel Date</label>
+      <input id="travel-date" type="date">
+    </div>
+
+    <!-- Passenger selector -->
+    <div class="form-group passenger-block passenger-selector">
+      <label>Passengers</label>
+      <button type="button" id="passenger-button">2 Adults, 0 Children</button>
+
+      <div class="popup-menu" id="passenger-popup">
+        <div class="popup-row">
+          <span>Adults</span>
+          <div class="popup-controls">
+            <button type="button" id="decrease-adults">-</button>
+            <span id="adults-count">2</span>
+            <button type="button" id="increase-adults">+</button>
+          </div>
+        </div>
+
+        <div class="popup-row">
+          <span>Children</span>
+          <div class="popup-controls">
+            <button type="button" id="decrease-children">-</button>
+            <span id="children-count">0</span>
+            <button type="button" id="increase-children">+</button>
+          </div>
+        </div>
+
+        <button type="button" class="close-popup" id="confirm-passengers">Done</button>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <button type="submit" class="flight-button">Search</button>
+  </form>
+</section>
+
+<!-- ========== RESULTS / CONTENT ==================================== -->
+<main class="content">
+
+  <!-- ===== REFINE YOUR SEARCH  ===================================== -->
+  <aside class="filters">
+    <h3>Refine your Search</h3>
+
+    <form id="filter-form">
+
+      <!-- Price ------------------------------------------------------ -->
+      <div class="filter-group">
+        <h4>Price per Person (£)</h4>
+        <input type="range" id="price-range" min="100" max="3000" step="50" value="1500"
+               oninput="priceOutput.value = this.value">
+        <div>Up to £<output id="priceOutput">1500</output></div>
+      </div>
+
+      <!-- Star Rating ------------------------------------------------ -->
+      <div class="filter-group">
+        <h4>Hotel Star Rating</h4>
+        <label><input type="checkbox" name="stars" value="5"> 5 ★</label><br>
+        <label><input type="checkbox" name="stars" value="4"> 4 ★</label><br>
+        <label><input type="checkbox" name="stars" value="3"> 3 ★</label><br>
+        <label><input type="checkbox" name="stars" value="2"> 2 ★</label><br>
+        <label><input type="checkbox" name="stars" value="1"> 1 ★</label>
+      </div>
+
+      <!-- Board Basis ------------------------------------------------ -->
+      <div class="filter-group">
+        <h4>Board Basis</h4>
+        <label><input type="checkbox" name="board" value="AI"> All-Inclusive</label><br>
+        <label><input type="checkbox" name="board" value="HB"> Half-Board</label><br>
+        <label><input type="checkbox" name="board" value="BB"> Bed &amp; Breakfast</label><br>
+        <label><input type="checkbox" name="board" value="RO"> Room-Only</label>
+      </div>
+
+      <!-- Amenities -------------------------------------------------- -->
+      <div class="filter-group">
+        <h4>Amenities</h4>
+        <label><input type="checkbox" name="amenity" value="pool"> Pool</label><br>
+        <label><input type="checkbox" name="amenity" value="beach"> Beachfront</label><br>
+        <label><input type="checkbox" name="amenity" value="wifi"> Free Wi-Fi</label><br>
+        <label><input type="checkbox" name="amenity" value="family"> Family-Friendly</label><br>
+        <label><input type="checkbox" name="amenity" value="adults"> Adults-Only</label>
+      </div>
+
+      <!-- Guest Rating ---------------------------------------------- -->
+      <div class="filter-group">
+        <h4>Guest Rating (min)</h4>
+        <select id="guest-rating">
+          <option value="0">Any</option>
+          <option value="6">6 / 10</option>
+          <option value="7">7 / 10</option>
+          <option value="8">8 / 10</option>
+          <option value="9">9 / 10</option>
+        </select>
+      </div>
+
+      <button type="submit" class="flight-button">Apply Filters</button>
+    </form>
+  </aside>
+
+  <!-- ===== HOTEL RESULTS (placeholder) ============================= -->
+  <section class="hotels">
+    <h3>We've Found 1000 destinations</h3>
+
+    <div class="hotel-card" onclick="location.href='hotel-details.html'">
+      <div class="image-placeholder"></div>
+      <div class="details">
+        <h4>Hotel Name ★★★☆☆</h4>
+        <p>Country, City</p>
+        <p>Room Type</p>
+        <p>Board Options</p>
+        <p>£ Cost per person</p>
+        <button>Continue</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER =============================================== -->
+<footer>
+  <div>
+    <h4>Contact Us</h4>
+    <p>📧 email@example.com</p><p>📞 +44 1234 567890</p>
+  </div>
+  <div>
+    <h4>Company Policies</h4>
+    <p>Privacy Policy</p><p>Terms & Conditions</p>
+  </div>
+  <div>
+    <h4>Our Social Media</h4>
+    <p>Facebook | Twitter | Instagram</p>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ============================================== -->
+<script>
+/* -------- Passenger selector (unchanged) --------------------------- */
+const passengerButton   = document.getElementById('passenger-button');
+const passengerPopup    = document.getElementById('passenger-popup');
+const confirmPassengers = document.getElementById('confirm-passengers');
+const adultsCount       = document.getElementById('adults-count');
+const childrenCount     = document.getElementById('children-count');
+
+document.getElementById('increase-adults').addEventListener('click', () => {
+  const c = +adultsCount.textContent;
+  if (c < 9) adultsCount.textContent = c + 1;
+});
+document.getElementById('decrease-adults').addEventListener('click', () => {
+  const c = +adultsCount.textContent;
+  if (c > 1) adultsCount.textContent = c - 1;
+});
+document.getElementById('increase-children').addEventListener('click', () => {
+  const c = +childrenCount.textContent;
+  if (c < 9) childrenCount.textContent = c + 1;
+});
+document.getElementById('decrease-children').addEventListener('click', () => {
+  const c = +childrenCount.textContent;
+  if (c > 0) childrenCount.textContent = c - 1;
+});
+
+passengerButton.addEventListener('click', () => {
+  passengerPopup.style.display =
+    passengerPopup.style.display === 'block' ? 'none' : 'block';
+});
+confirmPassengers.addEventListener('click', () => {
+  const a = +adultsCount.textContent;
+  const k = +childrenCount.textContent;
+  passengerButton.textContent =
+    `${a} Adult${a !== 1 ? 's' : ''}, ${k} Child${k !== 1 ? 'ren' : ''}`;
+  passengerPopup.style.display = 'none';
+});
+window.addEventListener('click', e => {
+  if (!document.querySelector('.passenger-selector').contains(e.target)) {
+    passengerPopup.style.display = 'none';
+  }
+});
+
+/* -------- Datalist autofill (unchanged) ---------------------------- */
+async function populateDatalist(url, datalistId, labelKey = 'label') {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    const data = await res.json();
+    const dl   = document.getElementById(datalistId);
+    dl.textContent = '';
+    data.forEach(item => {
+      const opt = document.createElement('option');
+      opt.value = typeof item === 'string'
+                  ? item
+                  : (item[labelKey] || item.code || '');
+      dl.appendChild(opt);
+    });
+  } catch (err) {
+    console.error(`❌ Failed loading ${url}:`, err);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  populateDatalist('/data/airports.json',     'departing-list');
+  populateDatalist('/data/destinations.json', 'destination-list');
+});
+
+/* --------- Main search submit (unchanged logic) ------------------- */
+document.getElementById('flight-form').addEventListener('submit', e => {
+  e.preventDefault();
+  localStorage.setItem('searchData', JSON.stringify({
+    departing  : document.getElementById('departing').value,
+    destination: document.getElementById('destination').value,
+    date       : document.getElementById('travel-date').value,
+    adults     : +adultsCount.textContent,
+    children   : +childrenCount.textContent
+  }));
+  window.location.href = 'hotel-search-results.html';
+});
+
+/* --------- Filter form (placeholder) ------------------------------ */
+document.getElementById('filter-form').addEventListener('submit', e => {
+  e.preventDefault();
+  // TODO: hook up real filtering against your results list
+  alert('Filters applied (demo only)');
+});
+</script>
+</body>
+</html>
